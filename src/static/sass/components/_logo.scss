@@ -1,0 +1,12 @@
+.logo-box {
+	.logo {
+		color: $green-color;
+		font-weight: 800;
+		font-size: 2rem;
+		font-family: $logo-font;
+
+		&:hover {
+			color: darken($green-color, 5%);
+		}
+	}
+}
