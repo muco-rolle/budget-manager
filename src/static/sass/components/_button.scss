@@ -1,11 +1,9 @@
-.btn, button {
+.btn {
 	display: inline-block;
 	background-color: $green-color;
 	color: $white-color;
 	padding: 0.8rem 2.5rem;
 	font-size: 1.4rem;
-	font-family: inherit;
-	font-weight: 700;
 	border-radius: 3px;
 	text-decoration: none;
 	box-shadow: 0 1px 3px rgba($black-color, 0.4);
