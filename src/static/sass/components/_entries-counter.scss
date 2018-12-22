@@ -1,0 +1,27 @@
+.entries-counter {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    .btn:not(:last-child) {
+        margin-right: 3rem;
+    }
+    .btn {
+        display: flex;
+        justify-content: space-between;
+        width: 25rem;
+        font-size: 1.7rem;
+        background: $dark-gray-color;
+
+        .income {
+            font-family: sans-serif;
+            color: $green-color;
+            font-weight: 800;
+        }
+
+        .expense {
+            color: $red-color;
+            font-weight: 800;
+            font-family: sans-serif;
+        }
+    }
+}

@@ -1,58 +1,59 @@
 .form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10rem;
-    background-color: $light-gray-color;
-    // box-shadow: 0 1px 1px rgba($black-color, 0.3);
-    border-bottom: 2px solid darken($light-gray-color, 20%);
-    border-top: 2px solid darken($light-gray-color, 80%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10rem;
+	background-color: $light-gray-color;
+	// box-shadow: 0 1px 1px rgba($black-color, 0.3);
+	border-bottom: 2px solid darken($light-gray-color, 20%);
+	border-top: 2px solid darken($light-gray-color, 80%);
 
-    &__group:not(:last-child) {
-        margin-right: 3rem;
-    }
+	&__group:not(:last-child) {
+		margin-right: 3rem;
+	}
 
-    .input-field, .select-field {
-        padding: 1.5rem 2rem;
-        background-color: $white-color;
-        outline: none;
-        border: none;
-        box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 
-        0 1px 0 rgba(0, 0, 0, .02);
-        border-radius: 3px;
-        font-weight: 700;
-        font-family: inherit;
-        transition: box-shadow 0.2s ease;
-        
-        &:active, &:focus {
-            box-shadow: 0 1px 3px rgba(50, 50, 93, 0.3), 
-        0 1px 0 rgba(0, 0, 0, .02);
-        }
-        &--description {
-            width: 300px;
-        }
+	.input-field,
+	.select-field {
+		padding: 1.5rem 2rem;
+		background-color: $white-color;
+		outline: none;
+		font-size: 1.4rem;
+		border: none;
+		box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
+		border-radius: 3px;
+		font-weight: 700;
+		font-family: inherit;
+		transition: box-shadow 0.2s ease;
 
-        &----money {
-            font-family: sans-serif !important;
-        }
+		&:active,
+		&:focus {
+			box-shadow: 0 1px 3px rgba(50, 50, 93, 0.3), 0 1px 0 rgba(0, 0, 0, 0.02);
+		}
+		&--description {
+			width: 300px;
+		}
 
-        &::-webkit-input-placeholder {
-            color: $dark-gray-color;
-        }
-    }
+		&----money {
+			font-family: sans-serif !important;
+		}
 
-    &__button {
-        width: 3.5rem;
-        height: 3.5rem;
-        border: 2px solid $green-color;
-        background-color: $white-color;
-        border-radius: 3rem;
-        outline: none;
-        cursor: pointer;
-        color: $green-color;
-        
-        &:active {
-            transform: translateY(1px);
-        }
-    }
+		&::-webkit-input-placeholder {
+			color: $dark-gray-color;
+		}
+	}
+
+	&__button {
+		width: 3.5rem;
+		height: 3.5rem;
+		border: 2px solid $green-color;
+		background-color: $white-color;
+		border-radius: 3rem;
+		outline: none;
+		cursor: pointer;
+		color: $green-color;
+
+		&:active {
+			transform: translateY(1px);
+		}
+	}
 }
