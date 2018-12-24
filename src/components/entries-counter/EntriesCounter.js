@@ -1,11 +1,11 @@
 import React from "react";
 import EntryCounter from "./EntryCounter";
 
-const EntriesCounter = ({ budget }) => {
+const EntriesCounter = props => {
 	return (
 		<div className="entries-counter">
-			<EntryCounter type="income" totalIncome={budget.incomes.length} />
-			<EntryCounter type="expense" totalExpense={budget.expenses.length} />
+			<EntryCounter type="income" totalValue={props.budget.incomes.length} show={props.showIncomeItems} />
+			<EntryCounter type="expense" totalValue={props.budget.expenses.length} show={props.showExpenseItems} />
 		</div>
 	);
 };

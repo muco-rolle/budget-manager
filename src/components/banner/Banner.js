@@ -8,8 +8,10 @@ const Banner = ({ budget }) => {
 	let totalExpenseAmount = 0;
 	let totalAmount = 0;
 
-	budget.incomes.forEach(income => (totalIncomeAmount += income.money));
-	budget.expenses.forEach(expense => (totalExpenseAmount += expense.money));
+	const { incomes, expenses } = budget;
+
+	incomes.forEach(income => (totalIncomeAmount += income.money));
+	expenses.forEach(expense => (totalExpenseAmount += expense.money));
 
 	totalAmount = totalIncomeAmount - totalExpenseAmount;
 

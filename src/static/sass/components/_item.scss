@@ -1,0 +1,57 @@
+.item {
+	width: 300px;
+	margin: 2rem;
+	background-color: $white-color;
+	padding: 2.6rem;
+	box-shadow: 0 1px 3px rgba($black-color, 0.4);
+	border-radius: 5px;
+	text-align: center;
+	flex: 1 1 auto;
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 800;
+
+		&--income {
+			color: $green-color;
+		}
+
+		&--expense {
+			color: $red-color;
+		}
+	}
+
+	&__value {
+		font-family: sans-serif;
+		margin: 1rem 0;
+		font-size: 1.5rem;
+	}
+
+	&__description {
+		font-weight: 700;
+		font-size: 1.4rem;
+		color: $dark-gray-color;
+		margin-bottom: 2rem;
+	}
+
+	&__buttons {
+		.btn {
+			font-size: 1rem;
+			padding: 0.5rem 2rem !important;
+
+			&--delete {
+				background-color: $red-color;
+				color: $white-color;
+			}
+
+			&--edit {
+				background-color: $green-color;
+				color: $white-color;
+			}
+		}
+
+		.btn:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+}

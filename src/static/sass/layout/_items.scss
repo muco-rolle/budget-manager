@@ -1,0 +1,9 @@
+.items {
+	margin-top: 5rem;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}

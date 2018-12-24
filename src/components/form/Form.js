@@ -9,16 +9,23 @@ class Form extends Component {
 	submitHandler = event => {
 		//-prevent the form from submitting;
 		event.preventDefault();
-
 		//= inputedvalues
+		const id = Date.now();
 		const type = this.type.current.value;
 		const description = this.description.current.value;
 		const money = +this.money.current.value;
+
 		//- clear out fields
 		this.description.current.value = "";
 		this.money.current.value = "";
 
-		this.props.saveDataToLocal({ type, description, money });
+		//- one of them is empty? stop running the function
+
+		if (type && description && money) {
+			this.props.saveDataToLocal({ id, type, description, money });
+		} else {
+			return;
+		}
 	};
 
 	render() {

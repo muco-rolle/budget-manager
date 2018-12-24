@@ -1,27 +1,13 @@
 import React from "react";
-import { ucFirst } from "../../helpers";
 import Button from "../ui/Button";
 
-const EntryCounter = ({ type, totalIncome, totalExpense }) => {
-	let entryCounter = null;
-
-	if (type === "income") {
-		entryCounter = (
-			<Button type="anchor-tag" classes="btn">
-				<span>{`${ucFirst(type)}`}</span>
-				<span className="income">{`(${totalIncome})`}</span>
-			</Button>
-		);
-	} else if (type === "expense") {
-		entryCounter = (
-			<Button type="anchor-tag" classes="btn">
-				<span>{`${ucFirst(type)}`}</span>
-				<span className="expense">{`(${totalExpense})`}</span>
-			</Button>
-		);
-	}
-
-	return entryCounter;
+const EntryCounter = props => {
+	return (
+		<Button type="anchor-tag" classes="btn" show={props.show}>
+			<span>{`show ${props.type}s`}</span>
+			<span className={`${props.type}`}>{`(${props.totalValue})`}</span>
+		</Button>
+	);
 };
 
 export default EntryCounter;
