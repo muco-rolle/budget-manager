@@ -1,11 +1,11 @@
 import React from "react";
-import { ucFirst } from "../../helpers";
+import { ucFirst, formatNumber } from "../../helpers";
 
 const Item = props => {
 	return (
 		<div className="item">
 			<p className={`item__title item__title--${props.type}`}>{ucFirst(props.type)}</p>
-			<p className="item__value">{props.money}</p>
+			<p className="item__value">{formatNumber(props.money)}</p>
 			<p className="item__description">{props.description}</p>
 
 			<div className="item__buttons">

@@ -1,4 +1,6 @@
 import React from "react";
+import { formatNumber } from "../../helpers";
+
 import AvailableAmount from "./AvailableAmount";
 import Entries from "./entries/Entries";
 import styles from "./styles";
@@ -17,8 +19,11 @@ const Banner = ({ budget }) => {
 
 	return (
 		<section className="banner-section" style={styles}>
-			<AvailableAmount totalAmount={totalAmount} />
-			<Entries totalIncomeAmount={totalIncomeAmount} totalExpenseAmount={totalExpenseAmount} />
+			<AvailableAmount totalAmount={formatNumber(totalAmount)} />
+			<Entries
+				totalIncomeAmount={formatNumber(totalIncomeAmount)}
+				totalExpenseAmount={formatNumber(totalExpenseAmount)}
+			/>
 		</section>
 	);
 };

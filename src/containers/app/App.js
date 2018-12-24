@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { storage } from "../../helpers";
+import { storage, formatNumber } from "../../helpers";
 
 //= imported styles
 import "../../static/sass/app.scss";
@@ -86,6 +86,7 @@ class App extends Component {
 	};
 
 	render() {
+		formatNumber(200000000);
 		return (
 			<React.Fragment>
 				<Header />
