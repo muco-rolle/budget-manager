@@ -13,6 +13,7 @@ const Items = props => {
 					money={income.money}
 					description={income.description}
 					removeItem={props.removeItem}
+					showEditFormHandler={props.showEditFormHandler}
 				/>
 			);
 		});
@@ -29,6 +30,7 @@ const Items = props => {
 					money={income.money}
 					description={income.description}
 					removeItem={props.removeItem}
+					showEditFormHandler={props.showEditFormHandler}
 				/>
 			);
 		});

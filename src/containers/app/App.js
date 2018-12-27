@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { storage, formatNumber } from "../../helpers";
+import { storage } from "../../helpers";
 
 //= imported styles
 import "../../static/sass/app.scss";
@@ -8,7 +8,7 @@ import "typeface-pacifico";
 //= imported components
 import Header from "../../components/header/Header";
 import Banner from "../../components/banner/Banner";
-import Form from "../../components/form/Form";
+import AddForm from "../../components/form/AddForm";
 import EntriesCounter from "../../components/entries-counter/EntriesCounter";
 import Items from "../../components/items/Items";
 
@@ -20,7 +20,8 @@ class App extends Component {
 			totalAmount: 0
 		},
 		showIncomeItems: false,
-		showExpenseItems: false
+		showExpenseItems: false,
+		showEditForm: false
 	};
 
 	componentDidMount = () => {
@@ -85,13 +86,17 @@ class App extends Component {
 		storage.set("budget", budget);
 	};
 
+	showEditFormHandler = event => {
+		event.preventDefault();
+		this.setState({ showEditForm: true });
+	};
+
 	render() {
-		formatNumber(200000000);
 		return (
 			<React.Fragment>
 				<Header />
 				<Banner budget={this.state.budget} />
-				<Form saveDataToLocal={this.saveDataToLocal} />
+				<AddForm saveDataToLocal={this.saveDataToLocal} />
 				<EntriesCounter
 					budget={this.state.budget}
 					showIncomeItems={this.showIncomeItems}
@@ -102,6 +107,7 @@ class App extends Component {
 					showIncomeItems={this.state.showIncomeItems}
 					showExpenseItems={this.state.showExpenseItems}
 					removeItem={this.removeItem}
+					showEditFormHandler={this.showEditFormHandler}
 				/>
 			</React.Fragment>
 		);

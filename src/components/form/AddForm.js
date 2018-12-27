@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Field from './Field';
 
-class Form extends Component {
+class AddForm extends Component {
 	type = React.createRef();
 	description = React.createRef();
 	money = React.createRef();
@@ -66,4 +66,4 @@ class Form extends Component {
 	}
 }
 
-export default Form;
+export default AddForm;

@@ -1,0 +1,21 @@
+.edit-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	.form {
+		display: flex;
+		background-color: transparent;
+		border: none;
+		flex-direction: column;
+
+		.input-field {
+			width: 300px;
+		}
+
+		&__group:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+}

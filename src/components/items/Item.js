@@ -12,9 +12,6 @@ const Item = props => {
 				<a href="/link" className="btn btn--delete" onClick={event => props.removeItem(event, props.type, props.id)}>
 					<i className="fa fa-trash" />
 				</a>
-				<a href="/link" className="btn btn--edit">
-					<i className="fa fa-edit" />
-				</a>
 			</div>
 		</div>
 	);

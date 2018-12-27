@@ -27,4 +27,27 @@ const formatNumber = number => {
 	return parts[0];
 };
 
-export { ucFirst, storage, formatNumber };
+//- get current month
+const month = {
+	months() {
+		return [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		];
+	},
+	now() {
+		return this.months()[new Date().getMonth()];
+	}
+};
+
+export { ucFirst, storage, formatNumber, month };
